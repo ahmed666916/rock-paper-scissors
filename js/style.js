@@ -5,7 +5,7 @@
 
 function getComputerChoice() {
 
-    let turn = ["rock", "paper", "scissor"];
+    let turn = ["Rock", "Paper", "Scissors"];
 
     let randomIndex = Math.floor(Math.random()*turn.length);
 
@@ -14,7 +14,14 @@ function getComputerChoice() {
     return randomChoice;
 
 }
+//console.log(getComputerChoice());
 
-console.log(getComputerChoice());
 
+function playRound(playerSelection, computerSelection) {
 
+}
+
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+
+console.log(playRound(playerSelection, computerSelection));
