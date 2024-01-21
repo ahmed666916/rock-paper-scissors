@@ -42,6 +42,10 @@ function playRound(playerSelection, computerSelection) {
         result = resultArray[4];
      }else if(playerChoice === "rock" && computerChoice === "scissors"){
         result = resultArray[5];
+     }else if(playerChoice !== "rock"|| playerChoice !=="paper" || playerChoice !== "scissors") {
+      result = "Invalid Choice! ";
+
+
      }else{
         result = "Tied! Try Again."
      }
