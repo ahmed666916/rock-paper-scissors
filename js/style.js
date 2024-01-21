@@ -18,6 +18,9 @@ function getComputerChoice() {
 
 
 function playRound(playerSelection, computerSelection) {
+    const resultArray = ["You Lose! Paper beats Rock", "You Lose! Scissors cuts Paper",
+     "You Lose! Rock crushes Scissors", "You Win! Paper beats Rock",
+     "You Win! Scissors cuts Paper","You Win! Rock crushes Scissors"];
 
 }
 
