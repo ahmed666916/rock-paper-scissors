@@ -5,7 +5,7 @@
 
 function getComputerChoice() {
 
-    let turn = ["rock", "paper", "scissors"];
+    const turn = ["rock", "paper", "scissors"];
 
     let randomIndex = Math.floor(Math.random()*turn.length);
 
