@@ -74,7 +74,7 @@ function game(){
 //game();
 
 const button_container = document.createElement('div');
-document.body.appendChild(button_container);
+
 
 
 const rock_btn = document.createElement('button');
@@ -85,9 +85,13 @@ button_container.appendChild(rock_btn);
 
 const scissors_btn = document.createElement('button');
 scissors_btn.textContent = "Scissors";
+button_container.appendChild(scissors_btn);
 
 const paper_btn = document.createElement('button');
 paper_btn.textContent = "Paper";
+button_container.appendChild(paper_btn);
+
+document.body.appendChild(button_container);
 
 
 rock_btn.addEventListener("click", playRound);
