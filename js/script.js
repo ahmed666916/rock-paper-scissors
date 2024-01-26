@@ -71,4 +71,11 @@ function game(){
     }
 }
 
-game();
+//game();
+
+const rock_btn = document.createElement('button');
+
+const scissors_btn = document.createElement('button');
+
+const paper_btn = document.createElement('button');
+
