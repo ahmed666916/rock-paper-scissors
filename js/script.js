@@ -59,6 +59,14 @@ function playRound(playerSelection, computerSelection) {
 
 //console.log(playRound(playerSelection, computerSelection));
 
+function changeColor(element, color) {
+   element.style.color = color;
+   }
+
+function changeBackgroundColor(element, color) {
+   element.style.backgroundColor = color;
+}
+
 
 function game(){
 
