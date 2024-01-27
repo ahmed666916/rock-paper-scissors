@@ -77,6 +77,9 @@ const button_container = document.createElement('div');
 
 const display_result = document.createElement('p');
 
+const result_list = document.createElement('ul');
+
+
 
 
 const rock_btn = document.createElement('button');
@@ -117,6 +120,8 @@ paper_btn.addEventListener("click", function() {
    
 });
 button_container.appendChild(paper_btn);
+
+display_result.appendChild(result_list);
 
 document.body.appendChild(button_container);
 
