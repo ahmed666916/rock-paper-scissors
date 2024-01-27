@@ -75,6 +75,8 @@ function game(){
 
 const button_container = document.createElement('div');
 
+const display_result = document.createElement('p');
+
 
 
 const rock_btn = document.createElement('button');
@@ -83,6 +85,8 @@ rock_btn.addEventListener("click", function() {
    const playerSelection = "rock";
    const computerSelection = getComputerChoice();
    console.log(playRound(playerSelection,computerSelection));
+   display_result.textContent = "Result Display";
+
    
 });
 button_container.appendChild(rock_btn);
@@ -95,6 +99,8 @@ scissors_btn.addEventListener("click", function() {
    const playerSelection = "scissors";
    const computerSelection = getComputerChoice();
    console.log(playRound(playerSelection,computerSelection));
+   display_result.textContent = "Result Display";
+
    
 });
 
@@ -106,6 +112,8 @@ paper_btn.addEventListener("click", function() {
    const playerSelection = "paper";
    const computerSelection = getComputerChoice();
    console.log(playRound(playerSelection,computerSelection));
+   display_result.textContent = "Result Display";
+
    
 });
 button_container.appendChild(paper_btn);
@@ -114,8 +122,7 @@ document.body.appendChild(button_container);
 
 
 
-const display_result = document.createElement('p');
-display_result.textContent = "Result Display";
+
 
 document.body.appendChild(display_result);
 
