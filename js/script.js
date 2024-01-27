@@ -91,11 +91,23 @@ button_container.appendChild(rock_btn);
 
 const scissors_btn = document.createElement('button');
 scissors_btn.textContent = "Scissors";
+scissors_btn.addEventListener("click", function() {
+   const playerSelection = "scissors";
+   const computerSelection = getComputerChoice();
+   console.log(playRound(playerSelection,computerSelection));
+   
+});
 
 button_container.appendChild(scissors_btn);
 
 const paper_btn = document.createElement('button');
 paper_btn.textContent = "Paper";
+paper_btn.addEventListener("click", function() {
+   const playerSelection = "paper";
+   const computerSelection = getComputerChoice();
+   console.log(playRound(playerSelection,computerSelection));
+   
+});
 button_container.appendChild(paper_btn);
 
 document.body.appendChild(button_container);
