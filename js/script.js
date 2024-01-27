@@ -67,6 +67,12 @@ function changeBackgroundColor(element, color) {
    element.style.backgroundColor = color;
 }
 
+function styleButton(element) {
+   element.style.opacity = 0.7;
+   element.style.border = '1px solid red';
+   element.style.padding = '10px';
+   element.style.margin = '10px';
+}
 
 function game(){
 
@@ -91,6 +97,7 @@ const result_list = document.createElement('ul');
 
 
 const rock_btn = document.createElement('button');
+styleButton(rock_btn);
 rock_btn.textContent = "Rock";
 rock_btn.addEventListener("click", function() {
    const playerSelection = "rock";
@@ -105,6 +112,7 @@ button_container.appendChild(rock_btn);
 
 
 const scissors_btn = document.createElement('button');
+styleButton(scissors_btn);
 scissors_btn.textContent = "Scissors";
 scissors_btn.addEventListener("click", function() {
    const playerSelection = "scissors";
@@ -118,6 +126,7 @@ scissors_btn.addEventListener("click", function() {
 button_container.appendChild(scissors_btn);
 
 const paper_btn = document.createElement('button');
+styleButton(paper_btn);
 paper_btn.textContent = "Paper";
 paper_btn.addEventListener("click", function() {
    const playerSelection = "paper";
