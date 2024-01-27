@@ -42,7 +42,7 @@ function playRound(playerSelection, computerSelection) {
         result = resultArray[4];
      }else if(playerChoice === "rock" && computerChoice === "scissors"){
         result = resultArray[5];
-     }else if(playerChoice !== "rock"|| playerChoice !=="paper" || playerChoice !== "scissors") {
+     }else if(playerChoice !== "rock"&& playerChoice !=="paper" && playerChoice !== "scissors") {
       result = "Invalid Choice! ";
 
 
@@ -79,12 +79,19 @@ const button_container = document.createElement('div');
 
 const rock_btn = document.createElement('button');
 rock_btn.textContent = "Rock";
+rock_btn.addEventListener("click", function() {
+   const playerSelection = "rock";
+   const computerSelection = getComputerChoice();
+   console.log(playRound(playerSelection,computerSelection));
+   
+});
 button_container.appendChild(rock_btn);
 
 
 
 const scissors_btn = document.createElement('button');
 scissors_btn.textContent = "Scissors";
+
 button_container.appendChild(scissors_btn);
 
 const paper_btn = document.createElement('button');
@@ -93,12 +100,6 @@ button_container.appendChild(paper_btn);
 
 document.body.appendChild(button_container);
 
-
-rock_btn.addEventListener("click", playRound);
-
-scissors_btn.addEventListener("click", playRound);
-
-paper_btn.addEventListener("click", playRound);
 
 
 
