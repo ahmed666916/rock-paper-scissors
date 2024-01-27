@@ -114,5 +114,12 @@ document.body.appendChild(button_container);
 
 
 
+const display_result = document.createElement('p');
+display_result.textContent = "Result Display";
+
+document.body.appendChild(display_result);
+
+
+
 
 
