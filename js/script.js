@@ -104,6 +104,9 @@
     function handleButtonClick(playerChoice) {
        
         const computerSelection = getComputerChoice();
+        const playerScore = document.createElement('span');
+        playerScore.textContent = player_score;
+        //button_container.appendChild(playerScore);
         
 
         result_list_item = document.createElement('li');
@@ -111,6 +114,7 @@
         span.textContent = playRound(playerChoice, computerSelection);
 
         result_list_item.appendChild(span);
+        result_list_item.appendChild(playerScore);
         result_list.appendChild(result_list_item);
 
         
