@@ -75,6 +75,8 @@ function game(){
 
 //game();
 
+document.body.style.padding = '10px';
+document.body.style.border = '1px solid black';
 
 
 
@@ -91,7 +93,6 @@ rock_btn.textContent = "Rock";
 rock_btn.addEventListener("click", function() {
    const playerSelection = "rock";
    const computerSelection = getComputerChoice();
-   //console.log(playRound(playerSelection,computerSelection));
    display_result.textContent = playRound(playerSelection,computerSelection);
 
    
@@ -106,7 +107,6 @@ scissors_btn.textContent = "Scissors";
 scissors_btn.addEventListener("click", function() {
    const playerSelection = "scissors";
    const computerSelection = getComputerChoice();
-   //console.log(playRound(playerSelection,computerSelection));
    display_result.textContent = playRound(playerSelection,computerSelection);
 
    
@@ -120,7 +120,6 @@ paper_btn.textContent = "Paper";
 paper_btn.addEventListener("click", function() {
    const playerSelection = "paper";
    const computerSelection = getComputerChoice();
-   //console.log(playRound(playerSelection,computerSelection));
    display_result.textContent = playRound(playerSelection,computerSelection);
 
    
