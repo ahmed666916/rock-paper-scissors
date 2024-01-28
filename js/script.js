@@ -10,6 +10,9 @@
         return randomChoice;
 
     }
+
+    let player_score = 0; 
+    let computer_score = 0;
     
 
     function playRound(playerSelection, computerSelection) {
@@ -24,26 +27,32 @@
         switch (true) {
         case playerChoice === "rock" && computerChoice === "paper":
             result = resultArray[0];
+            computer_score += 1;
             break;
     
         case playerChoice === "paper" && computerChoice === "scissors":
             result = resultArray[1];
+            computer_score += 1;
             break;
     
         case playerChoice === "scissors" && computerChoice === "rock":
             result = resultArray[2];
+            computer_score += 1;
             break;
     
         case playerChoice === "paper" && computerChoice === "rock":
             result = resultArray[3];
+            player_score += 1;
             break;
     
         case playerChoice === "scissors" && computerChoice === "paper":
             result = resultArray[4];
+            player_score += 1;
             break;
     
         case playerChoice === "rock" && computerChoice === "scissors":
             result = resultArray[5];
+            player_score += 1;
             break;
     
         case playerChoice !== "rock" && playerChoice !== "paper" && playerChoice !== "scissors":
@@ -93,6 +102,7 @@
     let result_list_item;
 
     function handleButtonClick(playerChoice) {
+       
         const computerSelection = getComputerChoice();
         
 
@@ -112,7 +122,10 @@
         button.textContent = label;
 
         button.addEventListener("click", function() {
-           handleButtonClick(choice);
+                
+            handleButtonClick(choice);
+            console.log("player score: " + player_score);
+            console.log("computer score: " + computer_score);
         })
 
         return button;
