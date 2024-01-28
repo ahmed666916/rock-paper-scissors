@@ -106,6 +106,7 @@
     }
 
     let display_result;
+    let result_list;
 
     function initializeGame() {
         const button_container = document.createElement('div');
@@ -113,7 +114,7 @@
 
         display_result = document.createElement('p');
 
-        const result_list = document.createElement('ul');
+        result_list = document.createElement('ul');
 
         const rock_btn = createButton("Rock", "rock");
         const scissors_btn = createButton("Scissors", "scissors");
