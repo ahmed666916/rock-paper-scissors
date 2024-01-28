@@ -1,8 +1,4 @@
 
-
-
-
-
 function getComputerChoice() {
 
     const turn = ["rock", "paper", "scissors"];
@@ -14,8 +10,6 @@ function getComputerChoice() {
     return randomChoice;
 
 }
-//console.log(getComputerChoice());
-
 
 function playRound(playerSelection, computerSelection) {
     const resultArray = ["You Lose! Paper beats Rock", "You Lose! Scissors cuts Paper",
@@ -53,12 +47,6 @@ function playRound(playerSelection, computerSelection) {
      return result;
 
 }
-
-//const playerSelection = "rock";
-//const computerSelection = getComputerChoice();
-
-//console.log(playRound(playerSelection, computerSelection));
-
 function changeColor(element, color) {
    element.style.color = color;
    }
@@ -87,13 +75,14 @@ function game(){
 
 //game();
 
+
+
+
 const button_container = document.createElement('div');
 
 const display_result = document.createElement('p');
 
 const result_list = document.createElement('ul');
-
-
 
 
 const rock_btn = document.createElement('button');
