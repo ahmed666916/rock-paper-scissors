@@ -105,36 +105,55 @@
         
     }
 
+    let display_result;
+
+    function initializeGame() {
+        const button_container = document.createElement('div');
+        button_container.className = "btn-container";
+
+        display_result = document.createElement('p');
+
+        const result_list = document.createElement('ul');
+
+        const rock_btn = createButton("Rock", "rock");
+        const scissors_btn = createButton("Scissors", "scissors");
+        const paper_btn = createButton("Paper", "paper");
+
+        button_container.appendChild(rock_btn);
+        button_container.appendChild(scissors_btn);
+        button_container.appendChild(paper_btn);
+
+        document.body.style.padding = '10px';
+        document.body.style.border = '1px solid black';
+
+        display_result.appendChild(result_list);
+
+        document.body.appendChild(button_container);
+        document.body.appendChild(display_result);
+
+
+
+        
+    }
+
+    initializeGame();
+
 
     
 
-    document.body.style.padding = '10px';
-    document.body.style.border = '1px solid black';
-
-    const button_container = document.createElement('div');
-    button_container.className = "btn-container";
-
-    const display_result = document.createElement('p');
-
-    const result_list = document.createElement('ul');
-
-    const rock_btn = createButton("Rock", "rock");
-    const scissors_btn = createButton("Scissors", "scissors");
-    const paper_btn = createButton("Paper", "paper");
-
-    button_container.appendChild(rock_btn);
     
-    button_container.appendChild(scissors_btn);
-
-    button_container.appendChild(paper_btn);
 
     
-    display_result.appendChild(result_list);
 
-    document.body.appendChild(button_container);
+    
 
-    document.body.appendChild(display_result);
+    
 
+    
+    
+    
+
+    
     
 
 
