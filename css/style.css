@@ -16,3 +16,8 @@ h1{
 p{
     text-align: center;
 }
+
+li{
+    text-align: center;
+    list-style: none;
+}
