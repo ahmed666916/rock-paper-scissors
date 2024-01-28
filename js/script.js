@@ -86,9 +86,22 @@
 
     //game();
 
+  
+    let result_list;
+    
+    let result_list_item;
+
     function handleButtonClick(playerChoice) {
         const computerSelection = getComputerChoice();
-        display_result.textContent = playRound(playerChoice, computerSelection);
+        
+
+        result_list_item = document.createElement('li');
+        const span = document.createElement('span');
+        span.textContent = playRound(playerChoice, computerSelection);
+
+        result_list_item.appendChild(span);
+        result_list.appendChild(result_list_item);
+
         
     }
 
@@ -105,8 +118,7 @@
         
     }
 
-    let display_result;
-    let result_list;
+   
 
     function initializeGame() {
         const button_container = document.createElement('div');
@@ -127,10 +139,13 @@
         document.body.style.padding = '10px';
         document.body.style.border = '1px solid black';
 
-        display_result.appendChild(result_list);
+ 
 
         document.body.appendChild(button_container);
         document.body.appendChild(display_result);
+
+        
+        document.body.appendChild(result_list);
 
 
 
