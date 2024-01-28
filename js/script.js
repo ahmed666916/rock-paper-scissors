@@ -10,6 +10,7 @@
         return randomChoice;
 
     }
+    
 
     function playRound(playerSelection, computerSelection) {
         const resultArray = ["You Lose! Paper beats Rock", "You Lose! Scissors cuts Paper",
@@ -111,7 +112,7 @@
         button.textContent = label;
 
         button.addEventListener("click", function() {
-            handleButtonClick(choice);
+           handleButtonClick(choice);
         })
 
         return button;
@@ -128,9 +129,10 @@
 
         result_list = document.createElement('ul');
 
-        const rock_btn = createButton("Rock", "rock");
-        const scissors_btn = createButton("Scissors", "scissors");
-        const paper_btn = createButton("Paper", "paper");
+    
+        const rock_btn = createButton("Rock", 'rock');
+        const scissors_btn = createButton("Scissors", 'scissors');
+        const paper_btn = createButton("Paper", 'paper');
 
         button_container.appendChild(rock_btn);
         button_container.appendChild(scissors_btn);
