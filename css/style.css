@@ -2,6 +2,11 @@
     padding: 3%;
 }
 
+h1{
+    text-align: center;
+    border: 1px solid red;
+}
+
 .btn-container {
     display: flex;
     justify-content: center;
