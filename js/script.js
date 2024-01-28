@@ -20,29 +20,40 @@ function playRound(playerSelection, computerSelection) {
      let computerChoice = computerSelection;
      let result = "";
 
-     if (playerChoice === "rock" && computerChoice === "paper") {
-        result = resultArray[0];
-        
-     }else if (playerChoice === "paper" && computerChoice === "scissors"){
-        result = resultArray[1];
-
-     }else if(playerChoice === "scissors" && computerChoice === "rock"){
-        result = resultArray[2];
-
-     }else if(playerChoice === "paper" && computerChoice === "rock"){
-        result = resultArray[3];
-
-     }else if(playerChoice === "scissors" && computerChoice === "paper"){
-        result = resultArray[4];
-     }else if(playerChoice === "rock" && computerChoice === "scissors"){
-        result = resultArray[5];
-     }else if(playerChoice !== "rock"&& playerChoice !=="paper" && playerChoice !== "scissors") {
-      result = "Invalid Choice! ";
-
-
-     }else{
-        result = "Tied! Try Again."
-     }
+     switch (true) {
+      case playerChoice === "rock" && computerChoice === "paper":
+          result = resultArray[0];
+          break;
+  
+      case playerChoice === "paper" && computerChoice === "scissors":
+          result = resultArray[1];
+          break;
+  
+      case playerChoice === "scissors" && computerChoice === "rock":
+          result = resultArray[2];
+          break;
+  
+      case playerChoice === "paper" && computerChoice === "rock":
+          result = resultArray[3];
+          break;
+  
+      case playerChoice === "scissors" && computerChoice === "paper":
+          result = resultArray[4];
+          break;
+  
+      case playerChoice === "rock" && computerChoice === "scissors":
+          result = resultArray[5];
+          break;
+  
+      case playerChoice !== "rock" && playerChoice !== "paper" && playerChoice !== "scissors":
+          result = "Invalid Choice!";
+          break;
+  
+      default:
+          result = "Tied! Try Again.";
+          break;
+  }
+  
 
      return result;
 
