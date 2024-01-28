@@ -80,7 +80,9 @@ document.body.style.border = '1px solid black';
 
 
 
+
 const button_container = document.createElement('div');
+button_container.className = "btn-container";
 
 const display_result = document.createElement('p');
 
