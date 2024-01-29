@@ -76,20 +76,7 @@
     element.style.margin = '10px';
     }
 
-    function game(){
-
-        for (let i = 0; i < 5; i++) {
-            let playerSelection = prompt("Play your Round(rock, paper, scissors): ");
-            let computerSelection = getComputerChoice();
-            console.log(playRound(playerSelection, computerSelection));
-        
-            
-        }
-    }
-
-    //game();
-
-  
+    
     let result_list;
     
     let result_list_item;
@@ -98,17 +85,31 @@
        
         const computerSelection = getComputerChoice();
 
-        result_list_item = document.createElement('li');
-        const span = document.createElement('span');
-        span.textContent = playRound(playerChoice, computerSelection);
-    
-        result_list_item.appendChild(span);
-    
-        // Update the existing playerScore element
-        const playerScore = document.getElementById('player-score');
-        playerScore.textContent = `Player: ${player_score}`;
-    
-        result_list.appendChild(result_list_item);
+    // Play the round and get the result
+    const roundResult = playRound(playerChoice, computerSelection);
+
+    // Create a new list item for the result
+    result_list_item = document.createElement('li');
+    const span = document.createElement('span');
+    span.textContent = roundResult;
+
+    result_list_item.appendChild(span);
+
+    // Update the existing playerScore and computerScore elements
+    const playerScore = document.getElementById('player-score');
+    const computerScore = document.getElementById('computer-score');
+
+    playerScore.textContent = `Player: ${player_score}`;
+    computerScore.textContent = `Computer: ${computer_score}`;
+
+    result_list.appendChild(result_list_item);
+
+    // Check for a winner after each round
+    if (player_score === 5) {
+        alert("You win!");
+    } else if (computer_score === 5) {
+        alert("You lose!");
+    }
 
         
     }
