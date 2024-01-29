@@ -68,13 +68,6 @@
         return result;
 
     }
-    function changeColor(element, color) {
-    element.style.color = color;
-    }
-
-    function changeBackgroundColor(element, color) {
-    element.style.backgroundColor = color;
-    }
 
     function styleButton(element) {
     element.style.opacity = 0.7;
