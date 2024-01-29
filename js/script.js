@@ -27,32 +27,32 @@
         switch (true) {
         case playerChoice === "rock" && computerChoice === "paper":
             result = resultArray[0];
-            computer_score += 1;
+            increaseComputerScore();
             break;
     
         case playerChoice === "paper" && computerChoice === "scissors":
             result = resultArray[1];
-            computer_score += 1;
+            increaseComputerScore();
             break;
     
         case playerChoice === "scissors" && computerChoice === "rock":
             result = resultArray[2];
-            computer_score += 1;
+            increaseComputerScore();
             break;
     
         case playerChoice === "paper" && computerChoice === "rock":
             result = resultArray[3];
-            player_score += 1;
+            increasePlayerScore();
             break;
     
         case playerChoice === "scissors" && computerChoice === "paper":
             result = resultArray[4];
-            player_score += 1;
+            increasePlayerScore();
             break;
     
         case playerChoice === "rock" && computerChoice === "scissors":
             result = resultArray[5];
-            player_score += 1;
+            increasePlayerScore();
             break;
     
         case playerChoice !== "rock" && playerChoice !== "paper" && playerChoice !== "scissors":
@@ -104,17 +104,17 @@
     function handleButtonClick(playerChoice) {
        
         const computerSelection = getComputerChoice();
-        const playerScore = document.createElement('span');
-        playerScore.textContent = player_score;
-        //button_container.appendChild(playerScore);
-        
 
         result_list_item = document.createElement('li');
         const span = document.createElement('span');
         span.textContent = playRound(playerChoice, computerSelection);
-
+    
         result_list_item.appendChild(span);
-        result_list_item.appendChild(playerScore);
+    
+        // Update the existing playerScore element
+        const playerScore = document.getElementById('player-score');
+        playerScore.textContent = `Player: ${player_score}`;
+    
         result_list.appendChild(result_list_item);
 
         
@@ -139,6 +139,7 @@
    
 
     function initializeGame() {
+     
         const button_container = document.createElement('div');
         button_container.className = "btn-container";
 
@@ -174,8 +175,10 @@
     initializeGame();
 
     function updateScoreboard() {
-        document.getElementsByClassName('player-score').innerText = 'Player: ${playerScore}';
-        document.getElementsByClassName('computer-score').innerText = 'Computer: ${computerScore}';
+        document.getElementById('player-score').innerText = `Player: ${player_score}`;
+        document.getElementById('computer-score').innerText = `Computer: ${computer_score}`;
+        
+       
 
     }
 
