@@ -2,9 +2,30 @@ body{
     padding: 3%;
 }
 
+.header {
+    display: block;
+   
+   
+}
+.scoreboard{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    
+}
+
+.score {
+    margin: 0 20px;
+    font-size: 24px;
+}
+
+
+
+
 h1{
     text-align: center;
-    border: 1px solid red;
+    
 }
 
 .btn-container {
@@ -18,7 +39,6 @@ p{
 }
 
 li{
-    border: 1px solid black;
     padding: 5px;
     text-align: center;
     list-style: none;
