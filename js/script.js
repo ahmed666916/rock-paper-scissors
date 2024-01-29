@@ -173,6 +173,22 @@
 
     initializeGame();
 
+    function updateScoreboard() {
+        document.getElementsByClassName('player-score').innerText = 'Player: ${playerScore}';
+        document.getElementsByClassName('computer-score').innerText = 'Computer: ${computerScore}';
+
+    }
+
+    function increasePlayerScore() {
+        player_score++;
+        updateScoreboard();
+    }
+
+    function increaseComputerScore() {
+        computer_score++;
+        updateScoreboard();
+    }
+
 
     
 
